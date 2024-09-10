@@ -30,10 +30,10 @@
     <section>
       <div style="width: 75% ; text-align: center; margin: auto; color: white;">
         
-        Categorias:
+        <span style="color: #ffc107; text-shadow: 1px 1px 2px black;">Categorias:</span>&nbsp;
         {% for post in posts %}
           {% for categoria in post.categorias.all %}
-              {{categoria.nombre}} &nbsp;&nbsp;&nbsp;
+          <span style="color: #ffc107; text-shadow: 1px 1px 2px black;">{{categoria.nombre}}</span> &nbsp;&nbsp;&nbsp;
           {% endfor %}
         {% endfor %}
 

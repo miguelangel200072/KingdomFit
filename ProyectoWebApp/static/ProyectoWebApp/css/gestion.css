@@ -1,6 +1,6 @@
 body {
   font-family: 'Lora';
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg");
+  background: url("../img/Bg_gym.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -20,7 +20,7 @@ p {
 }
 
 .text-faded {
-  color: rgba(255, 255, 255, 0.3);
+  color: #ffc107;
 }
 
 .site-heading {
@@ -41,6 +41,9 @@ p {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
+  text-shadow: -1px -1px 0 black,  
+  0 0 2px black,  /* Sombra más cerca del texto */
+  0 0 5px black;
 }
 
 .page-section {
@@ -80,7 +83,7 @@ p {
 }
 
 #mainNav {
-  background-color: rgba(24, 64, 8);
+  background-color: ffc107;
   font-family: 'Raleway';
 }
 
@@ -89,12 +92,12 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   font-weight: 800;
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #ffffff;
+  color: #000000;
   text-decoration: underline;
 }
 
@@ -103,11 +106,13 @@ p {
     font-size: 0.9rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgba(255, 255, 255, 0.4);
+    color: #000000;
     text-decoration: underline;
+    text-shadow: 0 0 5px rgb(255, 255, 255),  /* Sombra más cerca del texto */
+    0 0 5px rgb(255, 255, 255);;
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #ffffff;
+    color: #000000;
     text-decoration: underline;
   }
 }
@@ -127,15 +132,15 @@ p {
 
 @media (min-width: 992px) {
   .intro .intro-img {
-    width: 75%;
+    width: 65%;
     float: left;
   }
   .intro .intro-text {
     left: 600;
     width: 60%;
     margin-top: 3rem;
-    background-color: rgba(24, 64, 8);
-    color: cornsilk;
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
     position: absolute;
   }
   .intro .intro-text .intro-button {
@@ -155,15 +160,15 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgb(242, 245, 240);
+  background-color: rgba(148, 148, 148, 0.6);
 }
 
 .cta .cta-inner {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: rgba(24, 64, 8);
-  color: cornsilk;
+  background-color: #ffc107;
+  color: rgb(0, 0, 0);
 }
 
 .cta .cta-inner:before {
@@ -174,7 +179,7 @@ p {
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  border: solid rgba(68, 68, 68, 0.85);
 }
 
 .cta .cta-innerv {
@@ -229,7 +234,7 @@ p {
 }
 
 .footer {
-   background-color: rgba(24, 64, 8, 0.8);
+   background-color: rgba(65, 65, 65, 0.8);
 }
 
 
@@ -257,12 +262,13 @@ p {
 }
 
 a.link{
-  color: rgba(255, 255, 255, 0.7);
+  color: #ffc107;
 }
 
 a.link:hover{
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.4);
+  /* color: rgba(255, 255, 255, 0.4); */
+  color: rgb(216, 216, 216);
 }
 
 .section-content{
@@ -280,8 +286,9 @@ ul.errorlist{
 
 .linksCategorias{
 
-  color: white !important;
+  color: #ffc107 !important;
   text-decoration: underline;
+  text-shadow: 1px 1px 2px black;
 
 }
 
@@ -292,10 +299,27 @@ ul.errorlist{
 
 .contenedorFormulario{
 
-  background-color: rgba(24, 64, 8);
+  background-color: #ffc107;
   width: 50%;
   margin: auto;
   margin: 10px auto;
   border-radius: 5px;
   padding: 1px 0px;
+  text-transform: capitalize;
+}
+/* Estilo para campos de texto CONTACTO*/
+input[type="text"], 
+input[type="email"], 
+textarea {
+    background-color: #f0f0f0; /* Cambia este valor al color que prefieras */
+    border: 1px solid #ccc;    /* Cambia el borde si es necesario */
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Estilo para los campos de texto en tu formulario */
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    background-color: #e0e0e0; /* Cambia este valor al color que prefieras */
 }

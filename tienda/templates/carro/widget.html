@@ -1,80 +1,54 @@
-<table class="table table-bordered" style="color: white;">
+<table class="table table-bordered" style="color: rgb(0, 0, 0); background-color: rgba(206, 206, 206, 0.8); border-color: black;">
 
-    <thead>
-
-        <tr>
-
-            <th colspan="3" class="text-center">
-
+    <thead style="border-color: black;">
+        <tr style="border-color: black;">
+            <th colspan="3" class="text-center" style="border-color: black;">
                 Carro compras
-
             </th>
-
-
         </tr>
-
-        <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Suma</th>
+        <tr style="border-color: black;">
+            <th style="border-color: black;">Producto</th>
+            <th style="border-color: black;">Cantidad</th>
+            <th style="border-color: black;">Suma</th>
         </tr>
-
-
-
     </thead>
 
-    <tbody>
-
+    <tbody style="border-color: black;">
         {% if request.session.carro.items %}
             {% for key, value in request.session.carro.items %}
-                <tr class="text-center">
-
-                    <td>{{value.nombre}}</td>
-                    <td>{{value.cantidad}}</td>
-                    <td>
-                        <a href="{%  url 'carro:agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>
-                        <a href="{%  url 'carro:restar' value.producto_id %}" class="btn btn-sm btn-success">-</a><br>
+                <tr class="text-center" style="border-color: black;">
+                    <td style="border-color: black;">{{value.nombre}}</td>
+                    <td style="border-color: black;">{{value.cantidad}}</td>
+                    <td style="border-color: black;">
+                        <a href="{%  url 'carro:agregar' value.producto_id %}" class="btn btn-sm btn-warning">+</a>
+                        <a href="{%  url 'carro:restar' value.producto_id %}" class="btn btn-sm btn-warning">-</a><br>
                         {{value.precio}}€
                     </td>
                 </tr>
-
             {% endfor %}
-
         {% else %}
-            <tr>
-
-                <td colspan="3">
-                    
+            <tr style="border-color: black;">
+                <td colspan="3" style="border-color: black;">
                     <div class="alert alert-danger text-center">
                         Sin productos
                     </div>
-
                 </td>
-
             </tr>
         {% endif %}
     </tbody>
 
-    <tfoot>
-        <tr>
-
-            <td colspan="3">
-
+    <tfoot style="border-color: black;">
+        <tr style="border-color: black;">
+            <td colspan="3" style="border-color: black;">
                 Total: {{importe_total_carro}} €
             </td>
         </tr>
-
         {% if request.session.carro.items %}
-        <tr>
-
-            <td colspan="3" style="text-align: center;">
-
-                <a href="{% url 'procesar_pedido' %}" class="btn btn-success">Realizar Pedido</a>
+        <tr style="border-color: black;">
+            <td colspan="3" style="text-align: center; border-color: black;">
+                <a href="{% url 'procesar_pedido' %}" class="btn btn-warning">Realizar Pedido</a>
             </td>
-
         </tr>
         {% endif %}
     </tfoot>
-
-
 </table>

@@ -4,6 +4,8 @@
 
     {% load static %}
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Bootstrap -->
     <link href="{%static 'ProyectoWebApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -20,20 +22,20 @@
 
 <body>
 
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <h1 class="site-heading text-center text-warning d-none d-lg-block">
       
-        <span class="site-heading-lower">Gestión de Pedidos</span>
+        <span class="site-heading-lower">Kingdom Fit</span>
       </h1>
       
-      <div style="text-align: right; margin-right: 100px; color: white;">
+      <div style="text-align: right; margin-right: 100px; color: ffc107;">
 
         {% if user.is_authenticated %}
         
-        Hola {{user.username}}&nbsp; &nbsp; <a href="{% url 'cerrar_sesion' %}" style="color: white;">Cerrar sesion</a>
+        Hola {{user.username}}&nbsp; &nbsp; <a href="{% url 'cerrar_sesion' %}" style="color: ffc107;">Cerrar sesion</a>
 
         {% else %}
         
-        <a href="{% url 'logear' %}" style="color: white;">Login</a>&nbsp; &nbsp; <a href="{% url 'Autenticacion' %}" style="color: white;">Registrate</a>
+        <a href="{% url 'logear' %}" style="color: ffc107;">Login</a>&nbsp; &nbsp; <a href="{% url 'Autenticacion' %}" style="color: ffc107;">Registrate</a>
         
         {% endif %}
       </div>
@@ -54,7 +56,7 @@
           <li class="nav-item {% if request.path == '/servicios/' %} active {% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}">Servicios</a>
           </li>
-          <li class="nav-item {% if request.path == '/tienda' %} active {% endif %} px-lg-4">
+          <li class="nav-item {% if request.path == '/tienda/' %} active {% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">Tienda</a>
           </li>
           <li class="nav-item {% if request.path == '/contacto/' %} active {% endif %} px-lg-4">
@@ -77,36 +79,36 @@
 
 
     <!-- Footer -->
-    <footer class="footer text-faded text-center py-5">
-      <div class="container">
-        <p class="m-0">
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	    </p>
-        <p class="m-0 mbt">
-        	<a href="sample.html" class="link">Política de privacidad</a> ·
-        	<a href="sample.html" class="link">Aviso legal</a> ·
-        	<a href="sample.html" class="link">Cookies</a>
-		</p>
-        <p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
-      </div>
-	</footer>
+  <footer class="footer text-faded text-center py-5">
+    <div class="container">
+      <p class="m-0">
+        <a href="#" class="link">
+          <span class="fa-stack fa-lg">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i style="color: black;" class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="#" class="link">
+          <span class="fa-stack fa-lg">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i style="color: black;" class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="#" class="link">
+          <span class="fa-stack fa-lg">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i style="color: black;" class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </p>
+      <p class="m-0 mbt">
+        <a href="sample.html" class="link">Política de privacidad</a> ·
+        <a href="sample.html" class="link">Aviso legal</a> ·
+        <a href="sample.html" class="link">Cookies</a>
+      </p>
+      <p class="m-0 mbt1">&copy; Kingdom Fit 2020</p>
+    </div>
+  </footer>
 
     <!-- Bootstrap -->
     <script src="{%static 'ProyectoWebApp/vendor/jquery/jquery.min.js' %}"></script>

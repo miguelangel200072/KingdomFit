@@ -8,13 +8,13 @@
     
     {% if "valido" in request.GET %}
 
-        <p style="color: white;">Información enviada correctamente. Gracias.</p>
+        <p style="color: rgb(0, 0, 0);">Información enviada correctamente. Gracias.</p>
 
     {% endif %}
     <form action="" method="post" style="text-align: center;">
         {% csrf_token %}
-        <table style="color: white; margin: 20px auto;">{{miFormulario.as_table}}</table>
-        <input type="submit" value="Enviar" style="width: 150px;">
+        <table style="color: rgb(0, 0, 0); margin: 20px auto;">{{miFormulario.as_table}}</table>
+        <input type="submit" value="Enviar" class="btn btn-dark" style="width: 150px;">
     </form>
 
 </div>

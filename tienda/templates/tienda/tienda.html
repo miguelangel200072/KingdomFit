@@ -21,7 +21,7 @@
   <div class="row">
 {% for producto in productos %}
   <div class="col-md-4">
-    <div class="card" style="width: 100%; margin: 5px 5px;">
+    <div class="card" style="width: 100%; margin: 5px 5px; background-color: rgb(241, 241, 241);">
       <img src="{{producto.imagen.url}}" class="card-img-top">
       <div class="card-body" style="text-align: center;">
 
@@ -29,7 +29,7 @@
         <p class="card-text">{{producto.precio}}&nbsp;€</p>
       </div>
       <div class="card-footer text-center">
-        <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success w-100 text-truncate" style="background-color: green; color: aliceblue;">Agregar al carro</a>
+        <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-warning w-100 text-truncate">Agregar al carro</a>
       </div>
     </div><!--div card-->
   </div><!--div col-->
