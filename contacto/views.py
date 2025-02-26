@@ -15,7 +15,7 @@ def contacto(request):
 
             email = EmailMessage(subject="Mensaje desde app Django(asunto)",
                                  body="El usuario con nombre {} con la dirección {} escribe lo siguente:\n\n {}".format(nombre, email, contenido),
-                                 from_email="", to=["cacopapa1964@gmail.com"], reply_to=[email])
+                                 from_email="", to=["EMAIL_RECEPTOR"], reply_to=[email])
             
             try:
                 email.send()
